@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Chiko Mobi Litoral - Motos Elétricas e Autopropelidos</title>
+    <meta name="description" content="Chiko Mobi Litoral - Loja de motos elétricas e autopropelidos. Mobilidade sustentável, economia e praticidade no litoral. Conheça nossos modelos.">
+    <meta name="keywords" content="moto elétrica, autopropelido, mobilidade elétrica, litoral, scooter elétrica, veículo elétrico">
+    <meta name="author" content="Chiko Mobi Litoral">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="pt-BR">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Chiko Mobi Litoral - Motos Elétricas e Autopropelidos">
+    <meta property="og:description" content="Mobilidade sustentável com motos elétricas e autopropelidos. Economia e praticidade.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="imagens/favicon.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .hero-slide {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #0f172a; /* fallback se a imagem não carregar */
+        }
+        .hero-content { position: relative; z-index: 2; }
+        .swiper-pagination-bullet { background: rgba(255, 255, 255, 0.5); opacity: 1; }
+        .swiper-pagination-bullet-active { background: #22c55e; }
+        .hero-swiper .swiper-button-prev,
+        .hero-swiper .swiper-button-next {
+            color: white;
+            background: rgba(0, 0, 0, 0.3);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+        .hero-swiper .swiper-button-prev:hover,
+        .hero-swiper .swiper-button-next:hover {
+            background: rgba(34, 197, 94, 0.8);
+            color: white;
+        }
+        .hero-swiper .swiper-button-prev::after,
+        .hero-swiper .swiper-button-next::after {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .whatsapp-float { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .hero-height { height: 100vh; min-height: 600px; }
+        @media (min-width: 768px) { .hero-height { min-height: 700px; } }
+        @media (min-width: 1024px) { .hero-height { min-height: 800px; } }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="absolute top-0 left-0 right-0 z-50 bg-transparent">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="imagens/logo.png" alt="Chiko Mobi Litoral" class="h-16 md:h-24 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                    <span class="text-white text-xl md:text-2xl font-bold hidden">Chiko Mobi Litoral</span>
+                </div>
+                <div class="hidden md:flex items-center justify-center space-x-6 flex-1">
+                    <a href="#inicio" class="text-white hover:text-emerald-300 transition-colors duration-300">Início</a>
+                    <a href="#sobre" class="text-white hover:text-emerald-300 transition-colors duration-300">Sobre</a>
+                    <a href="#produtos" class="text-white hover:text-emerald-300 transition-colors duration-300">Produtos</a>
+                    <a href="galeria.html" class="text-white hover:text-emerald-300 transition-colors duration-300">Galeria</a>
+                    <a href="#beneficios" class="text-white hover:text-emerald-300 transition-colors duration-300">Benefícios</a>
+                    <a href="#contato" class="text-white hover:text-emerald-300 transition-colors duration-300">Contato</a>
+                </div>
+                <a href="https://wa.me/551333024500" target="_blank" class="hidden md:block text-white hover:text-emerald-300 transition-colors duration-300 mr-4" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp text-4xl"></i>
+                </a>
+                <button class="md:hidden text-white" id="mobile-menu-btn" aria-label="Menu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <div class="md:hidden hidden mt-4 bg-black/80 rounded-lg p-4" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="#inicio" class="text-white hover:text-emerald-300 transition-colors">Início</a>
+                    <a href="#sobre" class="text-white hover:text-emerald-300 transition-colors">Sobre</a>
+                    <a href="#produtos" class="text-white hover:text-emerald-300 transition-colors">Produtos</a>
+                    <a href="galeria.html" class="text-white hover:text-emerald-300 transition-colors">Galeria</a>
+                    <a href="#beneficios" class="text-white hover:text-emerald-300 transition-colors">Benefícios</a>
+                    <a href="#contato" class="text-white hover:text-emerald-300 transition-colors">Contato</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero / Capa com Carrossel -->
+    <section id="inicio" class="relative hero-height">
+        <div class="swiper hero-swiper h-full">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide hero-slide" style="background-image: url('imagens/capa.png');">
+                    <div class="hero-content h-full flex items-center justify-center">
+                        <div class="container mx-auto px-4 text-center">
+                            <div class="max-w-4xl mx-auto bg-black/40 backdrop-blur-sm rounded-2xl px-6 py-8 md:px-10 md:py-10 inline-block">
+                                <h1 class="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                                    Bem-vindo à <span class="text-emerald-400">Chiko Mobi</span> Litoral
+                                </h1>
+                                <p class="text-white text-lg md:text-xl mb-0 opacity-90">
+                                    Motos elétricas e autopropelidos para sua mobilidade sustentável
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide hero-slide" style="background-image: url('imagens/capa2.png');">
+                    <div class="hero-content h-full flex items-center justify-center">
+                        <div class="container mx-auto px-4 text-center">
+                            <div class="max-w-4xl mx-auto bg-black/40 backdrop-blur-sm rounded-2xl px-6 py-8 md:px-10 md:py-10 inline-block">
+                                <h2 class="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                                    Mobilidade <span class="text-emerald-400">Elétrica</span>
+                                </h2>
+                                <p class="text-white text-lg md:text-xl mb-0 opacity-90">
+                                    Economia, silêncio e zero emissões no seu dia a dia
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide hero-slide" style="background-image: url('imagens/capa3.png');">
+                    <div class="hero-content h-full flex items-center justify-center">
+                        <div class="container mx-auto px-4 text-center">
+                            <div class="max-w-4xl mx-auto bg-black/40 backdrop-blur-sm rounded-2xl px-6 py-8 md:px-10 md:py-10 inline-block">
+                                <h2 class="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                                    Autopropelidos e <span class="text-emerald-400">Scooters</span>
+                                </h2>
+                                <p class="text-white text-lg md:text-xl mb-0 opacity-90">
+                                    Praticidade para o litoral e para a cidade
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide hero-slide" style="background-image: url('imagens/capa4.png');">
+                    <div class="hero-content h-full flex items-center justify-center">
+                        <div class="container mx-auto px-4 text-center">
+                            <div class="max-w-4xl mx-auto bg-black/40 backdrop-blur-sm rounded-2xl px-6 py-8 md:px-10 md:py-10 inline-block">
+                                <h2 class="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                                    Visite a <span class="text-emerald-400">Chiko Mobi</span> Litoral
+                                </h2>
+                                <p class="text-white text-lg md:text-xl mb-0 opacity-90">
+                                    Praia Grande - SP · Motos elétricas e autopropelidos
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev" aria-label="Slide anterior"></div>
+            <div class="swiper-button-next" aria-label="Próximo slide"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="py-16 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 text-center">
+                    Sobre a <span class="text-emerald-400">Chiko Mobi Litoral</span>
+                </h2>
+                <div class="w-24 h-1 bg-emerald-500 mx-auto mb-10"></div>
+                <div class="text-gray-300 text-base md:text-lg leading-relaxed space-y-6">
+                    <p>
+                        A Chiko Mobi Litoral nasceu com a missão de levar mobilidade elétrica acessível e sustentável para o Litoral Paulista. Trabalhamos com motos e bikes elétricas modernas, econômicas e autopropelidas, ideais para quem busca praticidade no dia a dia sem depender de combustível.
+                    </p>
+                    <p>
+                        Acreditamos que o futuro do transporte é limpo, silencioso e inteligente. Nossos veículos reduzem custos com manutenção, eliminam emissão de poluentes e oferecem uma alternativa eficiente para trabalho, lazer e deslocamentos urbanos.
+                    </p>
+                    <p>
+                        Mais do que vender, promovemos um novo jeito de se movimentar: com economia, tecnologia e respeito ao meio ambiente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Produtos -->
+    <section id="produtos" class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center lg:max-w-none">
+                <div class="rounded-xl p-6 md:p-8 mb-2" style="background-color: #E8E8E8;">
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-gray-900">
+                        Nossos <span class="text-emerald-600">Produtos</span>
+                    </h2>
+                    <p class="text-gray-700 text-lg md:text-xl leading-relaxed mb-6">
+                        Trabalhamos com <strong>motos elétricas</strong> e <strong>autopropelidos</strong> para você se deslocar com economia, segurança e respeito ao meio ambiente.
+                    </p>
+                    <div class="w-24 h-1 bg-emerald-500 mx-auto mb-8"></div>
+                    <!-- Cards com imagens dos produtos -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3 mb-8">
+                        <a href="galeria.html" class="block rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group aspect-[4/5] sm:min-h-[380px] lg:min-h-[480px]">
+                            <img src="imagens/produto1.png" alt="Produto 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </a>
+                        <a href="galeria.html" class="block rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group aspect-[4/5] sm:min-h-[380px] lg:min-h-[480px]">
+                            <img src="imagens/produto2.png" alt="Produto 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </a>
+                        <a href="galeria.html" class="block rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group aspect-[4/5] sm:min-h-[380px] lg:min-h-[480px]">
+                            <img src="imagens/produto3.png" alt="Produto 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </a>
+                        <a href="galeria.html" class="block rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group aspect-[4/5] sm:min-h-[380px] lg:min-h-[480px]">
+                            <img src="imagens/produto4.png" alt="Produto 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </a>
+                    </div>
+                    <div class="text-center mb-8">
+                        <a href="galeria.html" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-base md:text-lg py-4 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] border-2 border-emerald-700/30">
+                            Veja Mais em Nossa Galeria de Produtos
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <div class="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-motorcycle text-emerald-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Motos Elétricas</h3>
+                            <p class="text-gray-600">Modelos para uso urbano e no litoral, com boa autonomia e recarga prática.</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <div class="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-battery-full text-emerald-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Autopropelidos</h3>
+                            <p class="text-gray-600">Scooters e veículos elétricos leves para deslocamentos curtos e médios.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Benefícios -->
+    <section id="beneficios" class="py-16 relative bg-gradient-to-br from-gray-800 to-gray-900">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                        Por que <span class="text-emerald-400">Chiko Mobi</span>?
+                    </h2>
+                    <div class="w-24 h-1 bg-emerald-400 mx-auto mb-6"></div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center p-6 rounded-xl bg-white/10 backdrop-blur-sm">
+                        <i class="fas fa-leaf text-emerald-400 text-4xl mb-4"></i>
+                        <h3 class="text-lg font-bold text-white mb-2">Sustentável</h3>
+                        <p class="text-white/90 text-sm">Zero emissões e menor impacto ambiental.</p>
+                    </div>
+                    <div class="text-center p-6 rounded-xl bg-white/10 backdrop-blur-sm">
+                        <i class="fas fa-wallet text-emerald-400 text-4xl mb-4"></i>
+                        <h3 class="text-lg font-bold text-white mb-2">Economia</h3>
+                        <p class="text-white/90 text-sm">Custo de recarga muito menor que combustível.</p>
+                    </div>
+                    <div class="text-center p-6 rounded-xl bg-white/10 backdrop-blur-sm">
+                        <i class="fas fa-volume-mute text-emerald-400 text-4xl mb-4"></i>
+                        <h3 class="text-lg font-bold text-white mb-2">Silêncio</h3>
+                        <p class="text-white/90 text-sm">Deslocamento tranquilo e sem barulho.</p>
+                    </div>
+                    <div class="text-center p-6 rounded-xl bg-white/10 backdrop-blur-sm">
+                        <i class="fas fa-bolt text-emerald-400 text-4xl mb-4"></i>
+                        <h3 class="text-lg font-bold text-white mb-2">Praticidade</h3>
+                        <p class="text-white/90 text-sm">Recarga em casa ou em tomada comum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner promocional Chiko Mobi Litoral -->
+    <section id="banner-promo" class="relative w-full overflow-hidden bg-black" aria-label="Motos elétricas - Modernas, econômicas e sem CNH">
+        <a href="https://wa.me/551333024500" target="_blank" rel="noopener" class="block w-full focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black">
+            <img src="imagens/banner-promo.png" alt="Chiko Mobi Litoral - Motos elétricas modernas, econômicas e sem CNH. Sem gasolina, sem CNH, sem manutenção, sem poluição. Condições facilitadas. Av. Pres. Kennedy, 903 - Boqueirão, Praia Grande - SP. WhatsApp (13) 3302-4500" class="w-full h-auto object-cover object-center block">
+        </a>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="relative py-12 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 text-center">Contato</h2>
+                <div class="flex flex-col items-center gap-6 mb-8">
+                    <div class="flex items-center justify-center gap-3 text-white/90">
+                        <i class="fas fa-map-marker-alt text-emerald-400 text-xl flex-shrink-0"></i>
+                        <address class="not-italic text-center">
+                            Av. Pres. Kennedy, 903 - Boqueirão<br>
+                            Praia Grande - SP
+                        </address>
+                    </div>
+                    <div class="flex items-center justify-center gap-3 text-white/90">
+                        <i class="fab fa-whatsapp text-emerald-400 text-xl flex-shrink-0"></i>
+                        <a href="https://wa.me/551333024500" target="_blank" class="hover:text-emerald-400 transition-colors" rel="noopener">(13) 3302-4500</a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="https://wa.me/551333024500" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        Chame no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-4 text-white text-sm sm:text-base">
+        <div class="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-1 px-4 text-center relative">
+            <span>&copy; <span id="ano-atual"></span> Chiko Mobi Litoral.</span>
+            <div class="flex items-center gap-1 mt-2 sm:mt-0">
+                <span>Produzido por:</span>
+                <img src="imagens/footerj3.png" alt="Logo J3" class="h-6 sm:h-8">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp flutuante -->
+    <a href="https://wa.me/551333024500" target="_blank" class="fixed bottom-6 right-6 z-50 whatsapp-float" aria-label="WhatsApp">
+        <div class="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 flex items-center justify-center">
+            <i class="fab fa-whatsapp text-3xl"></i>
+        </div>
+    </a>
+
+    <script>
+        document.getElementById('ano-atual').textContent = new Date().getFullYear();
+
+        const swiper = new Swiper('.hero-swiper', {
+            loop: true,
+            autoplay: { delay: 5000, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'slide',
+            speed: 1000,
+        });
+
+        var mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        var mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+            mobileMenu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () { mobileMenu.classList.add('hidden'); });
+            });
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+            anchor.addEventListener('click', function (e) {
+                var href = this.getAttribute('href');
+                if (href === '#') return;
+                e.preventDefault();
+                var target = document.querySelector(href);
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+</body>
+</html>

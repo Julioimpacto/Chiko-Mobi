@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Motos - Chiko Mobi Litoral</title>
+    <meta name="description" content="Conheça todos os modelos de motos elétricas e autopropelidos da Chiko Mobi Litoral. X 1000W, X 2000W, LY 3000W e mais.">
+    <link rel="icon" type="image/png" href="imagens/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-gray-800 sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center">
+                    <img src="imagens/logo.png" alt="Chiko Mobi Litoral" class="h-12 md:h-16 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                    <span class="text-white text-lg md:text-xl font-bold hidden">Chiko Mobi Litoral</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-white hover:text-emerald-300 transition-colors">Início</a>
+                    <a href="index.html#sobre" class="text-white hover:text-emerald-300 transition-colors">Sobre</a>
+                    <a href="galeria.html" class="text-emerald-400 font-semibold">Galeria</a>
+                    <a href="index.html#contato" class="text-white hover:text-emerald-300 transition-colors">Contato</a>
+                </div>
+                <a href="https://wa.me/551333024500" target="_blank" class="text-white hover:text-emerald-300 transition-colors" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp text-3xl"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Título da página -->
+    <section class="bg-emerald-600 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">Nossos Modelos</h1>
+            <p class="text-emerald-100 text-lg">Motos elétricas e autopropelidos para você escolher</p>
+        </div>
+    </section>
+
+    <!-- Grid de motos -->
+    <section class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="galeria-motos">
+            <!-- Cards gerados abaixo (1 a 22) -->
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-gray-800 text-white py-12 text-center">
+        <div class="container mx-auto px-4">
+            <p class="text-xl mb-6">Interessado em algum modelo? Fale conosco!</p>
+            <a href="https://wa.me/551333024500" target="_blank" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors">
+                <i class="fab fa-whatsapp text-2xl"></i>
+                Chame no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-4 text-white text-sm sm:text-base">
+        <div class="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-1 px-4 text-center">
+            <span>&copy; <span id="ano-atual"></span> Chiko Mobi Litoral.</span>
+            <div class="flex items-center gap-1 mt-2 sm:mt-0">
+                <span>Produzido por:</span>
+                <img src="imagens/footerj3.png" alt="Logo J3" class="h-6 sm:h-8">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('ano-atual').textContent = new Date().getFullYear();
+
+        var motos = [
+            { img: 'imagens/galeria/1.png', nome: 'X 1000W', itens: ['Velocidade de até 32km/h', 'Autonomia de aprox. 70km', 'Bateria: Chumbo ou Lítio', 'Ré', '2 Baús', 'Som Bluetooth', 'Suporte para celular', 'Alarme e travas nas rodas'] },
+            { img: 'imagens/galeria/2.png', nome: 'X 2000W', itens: ['Velocidade de até 55km/h', 'Autonomia de aprox. 70km', 'Bateria: Chumbo ou Lítio', 'Ré', '2 Baús', 'Som Bluetooth', 'Suporte para celular', 'Alarme e travas nas rodas'] },
+            { img: 'imagens/galeria/3.png', nome: 'AP 500W', itens: ['Velocidade de até 25km/h', 'Autonomia de aprox. 50km', 'Bateria: Chumbo', 'Alarme e travas nas rodas', 'Suporte para celular'] },
+            { img: 'imagens/galeria/4.png', nome: 'LY 3000W', itens: ['Velocidade de até 65km/h', 'Autonomia de aprox. 65km', 'Bateria: Chumbo ou Lítio', 'Espaço para baú adicional na versão de Lítio', 'Ré', '2 Baús', 'Som Bluetooth', 'Suporte para celular', 'Alarme e travas nas rodas'] },
+            { img: 'imagens/galeria/5.png', nome: 'BW1 1000W', itens: ['Velocidade de até 32km/h', 'Autonomia de aprox. 40km', 'Bateria: Lítio', 'NFC', 'Pedal assistido'] },
+            { img: 'imagens/galeria/6.png', nome: 'HULU 1000W', itens: ['Velocidade de até 32km/h', 'Autonomia de aprox. 55km', 'Bateria: Lítio', 'Entrada USB', 'Freio Hidráulico'] },
+            { img: 'imagens/galeria/7.png', nome: 'RULI 800W', itens: ['Velocidade de até 32km/h', 'Autonomia de aprox. 60km', 'Bateria: Lítio', 'Sistema de alarme', 'Porta Volumes'] },
+            { img: 'imagens/galeria/8.png', nome: 'MINI 8 800W', itens: ['Velocidade de até 32km/h', 'Autonomia de aprox. 60km', 'Bateria: Lítio', 'Pedal assistido', 'Cesta'] },
+            { img: 'imagens/galeria/9.png', nome: 'NX-01 1000W', itens: ['Velocidade de até 32km/h', 'Autonomia de aprox. 70km', 'Bateria: Lítio', 'Pedal assistido', 'Câmbio Shimano'] },
+            { img: 'imagens/galeria/10.png', nome: 'EB-03 1000W', itens: ['Velocidade de até 32km/h', 'Autonomia de aprox. 70km', 'Bateria: Lítio', 'Pedal assistido', 'Câmbio Shimano', 'Dobrável'] },
+            { img: 'imagens/galeria/11.png', nome: 'EB-15 1000W', itens: ['Velocidade de até 32km/h', 'Autonomia de aprox. 60km', 'Bateria: Lítio', 'Pedal assistido', 'Câmbio Shimano'] },
+            { img: 'imagens/galeria/12.png', nome: 'EB-07 1000W', itens: ['Velocidade de até 32km/h', 'Autonomia de aprox. 60km', 'Bateria: Lítio', 'Pedal assistido', 'Câmbio Shimano', 'Dobrável'] },
+            { img: 'imagens/galeria/13.png', nome: 'BK-06 1000W', itens: ['Velocidade de até 32km/h', 'Autonomia de aprox. 60km', 'Bateria: Lítio', 'Pedal assistido', 'Câmbio Shimano', 'Dobrável', 'Cesta'] },
+            { img: 'imagens/galeria/14.png', nome: 'Titan 1000W', itens: ['Velocidade de até 32km/h', 'Autonomia de aprox. 50km', 'Bateria: Lítio', 'Bluetooth', 'NFC', 'Suporte para celular', 'Ré', 'Porta USB'] },
+            { img: 'imagens/galeria/15.png', nome: 'Raptor 1000W', itens: ['Velocidade de até 32km/h', 'Autonomia de aprox. 50km', 'Bateria: Lítio', 'Bluetooth', 'NFC', 'Suporte para celular', 'Ré', 'Porta USB'] },
+            { img: 'imagens/galeria/16.png', nome: 'X-09 1000W', itens: ['Velocidade de até 32km/h', 'Bateria: Lítio', 'Bluetooth', 'Pedal assistido', 'Câmbio Shimano', 'Dobrável'] },
+            { img: 'imagens/galeria/17.png', nome: 'X-07 1000W', itens: ['Velocidade de até 32km/h', 'Bateria: Lítio', 'Bluetooth', 'Pedal assistido', 'Câmbio Shimano', 'Dobrável', 'Porta objetos'] },
+            { img: 'imagens/galeria/18.png', nome: 'G-12 1000W', itens: ['Velocidade de até 32km/h', 'Autonomia de aprox. 80km', 'Bateria: Lítio', 'NFC'] },
+            { img: 'imagens/galeria/19.png', nome: 'V-70 1000W', itens: ['Velocidade de até 32km/h', 'Autonomia de aprox. 65km', 'Bateria: Lítio', 'NFC', 'Cesta'] },
+            { img: 'imagens/galeria/20.png', nome: 'QJ-10 800W', itens: ['Velocidade de até 32km/h', 'Autonomia de aprox. 65km', 'Bateria: Lítio', 'NFC', 'Cesta'] },
+            { img: 'imagens/galeria/21.png', nome: 'X-08 1000W', itens: ['Velocidade de até 32km/h', 'Bateria: Lítio', 'Pedal assistido e Acelerador', 'Câmbio Shimano', 'NFC', 'Porta Objetos'] },
+            { img: 'imagens/galeria/22.png', nome: 'Prime 1000W', itens: ['Velocidade de até 32km/h', 'Autonomia de aprox. 50km', 'Bateria: Lítio', 'Cruise Control', 'Ré', 'NFC', 'Bluetooth', 'Porta USB'] }
+        ];
+
+        var container = document.getElementById('galeria-motos');
+        motos.forEach(function (moto) {
+            var card = document.createElement('article');
+            card.className = 'bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col';
+            var listHtml = moto.itens.map(function (item) { return '<li class="flex items-start gap-2"><i class="fas fa-check text-emerald-500 mt-1 flex-shrink-0"></i><span>' + item + '</span></li>'; }).join('');
+            card.innerHTML =
+                '<div class="aspect-square bg-gray-100 flex items-center justify-center p-4">' +
+                '<img src="' + moto.img + '" alt="' + moto.nome + '" class="max-w-full max-h-full object-contain" loading="lazy" onerror="this.parentElement.innerHTML=\'<span class=text-gray-400>Sem imagem</span>\'">' +
+                '</div>' +
+                '<div class="p-5 flex-1 flex flex-col">' +
+                '<h2 class="text-xl font-bold text-gray-900 mb-3">' + moto.nome + '</h2>' +
+                '<ul class="text-gray-600 text-sm space-y-1.5 flex-1">' + listHtml + '</ul>' +
+                '<a href="https://wa.me/551333024500?text=Olá! Tenho interesse no modelo ' + encodeURIComponent(moto.nome) + '" target="_blank" class="mt-4 inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-2.5 px-4 rounded-lg transition-colors text-sm">' +
+                '<i class="fab fa-whatsapp"></i> Consultar' +
+                '</a>' +
+                '</div>';
+            container.appendChild(card);
+        });
+    </script>
+</body>
+</html>
